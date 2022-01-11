@@ -1,0 +1,162 @@
+*{
+    color: white;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-color: rgb(46, 46, 46);
+    padding: 2rem;
+    max-width: 59rem;
+    margin: auto;
+}
+
+#alert{
+    background-color: rgb(136, 57, 57);
+    position: absolute;
+    top: 2rem;
+    left:0;
+    right: 0;
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 20rem;
+    margin: auto;
+    text-align: center;
+}
+.alertHide{
+    opacity: 0;
+}
+.intro{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#players{
+    margin: auto;
+    display: grid;
+    grid-gap: .2rem;
+}
+input, select, button{
+    position: relative;
+    outline: none;
+    border: 0;
+    text-align: center;
+    padding: 1rem;
+    background-color: #999;
+    color: white;
+}
+
+.minSize, .cancel{
+    background-color: rgb(136, 57, 57);
+    color: white;
+}
+.cancel:active{
+    background-color: rgba(119, 50, 50, 0.794);
+}
+.minSize:focus{
+    border-bottom: 2px solid rgb(136, 57, 57);
+}
+input:focus{
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+button{
+    border: none;
+    background-color: #777;
+}
+button:disabled{
+    color: gray;
+    background-color: rgb(80, 80, 80);
+}
+button:active{
+    background-color: rgb(54, 54, 54);
+}
+::placeholder{
+    color: rgb(219, 219, 219);
+}
+/* =========== */
+#playersInfo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#playersInfo p{
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 1rem;
+}
+.questions, .quest{
+    width: 100%;
+}
+#categories{
+    display: grid;
+    grid-gap: 1rem;
+}
+#categories *{
+    
+    text-align: center;
+    margin:auto
+}
+#categories h2{
+    text-transform: capitalize;
+    margin-top: 2rem;
+    font-size: 4rem;
+    padding: 20px 50px;
+    border-bottom: 2px solid whitesmoke;    
+}
+#categories p{
+    text-transform: capitalize;
+    background-color: #123;
+    padding: 20px;
+}
+#categories .questions{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+#categories .questions p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: initial;
+    height: 100%;
+}
+#categories .quest p:hover, button:hover{
+    cursor: pointer;
+}
+#categories .questions .question{
+    text-transform: capitalize;
+    background-color: #123;
+    color: rgb(209, 231, 253);
+}
+#categories .questions .answer{
+    background-color: rgb(13, 25, 39);
+    color: rgb(98, 163, 233);
+}
+#categories .questions .value{
+    cursor: pointer;
+    background-color: rgb(38, 104, 38);
+    color: rgb(150, 219, 150);
+}
+
+/*========================
+        SCROLLBAR
+--------------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset -10px 0 5px rgb(25, 47, 70) ;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border: 5px solid #123;
+    border-radius: 10px;
+}
